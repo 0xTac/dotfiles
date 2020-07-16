@@ -1,0 +1,54 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    # git
+    ~/.gitconfig: config/gitconfig
+    ~/.gitignore_global: config/gitignore_global
+    # tmux
+    ~/.tmux.conf: config/tmux.conf
+    ~/.tmux/plugins:
+        create: true
+        path: modules/tmux/
+    # zsh
+    ~/.zshrc: config/zshrc
+    # ssh
+    ~/.ssh/config : config/ssh_config
+    # vim
+    ~/.vimrc: config/vimrc
+    ~/.vim/autoload/plug.vim:
+      create: true
+      path: modules/vim/plug.vim
+    ~/.vim/plugged:
+        create: true
+        path: modules/vim/plugged/
+    # # binary
+    #     ~/bin/common:
+    #       create: true
+    #       path: bin/
+    # sublime
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublimetext-settings
+    ~/.config/sublime-merge/Packages/User/Preferences.sublime-settings: config/sublimemerge-settings
+    # vscode
+    ~/.config/Code/User/settings.json: config/vscode-settings.json    
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# - shell:
+#   -
+#     command: setup/main.sh
+#     description: Running setup script
+#     stdin: true
+#     stdout: true
+#     stderr: true
+#   -
+#     command: cd modules/tmux-mem-cpu-load && cmake . && make
+#     description: Building tmux-mem-cpu-load
+#   -
+#     command: ~/.fzf/install --all
+#     description: Installing fzf
