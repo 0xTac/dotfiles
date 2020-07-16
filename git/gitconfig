@@ -1,0 +1,20 @@
+[color]
+	ui = true
+[core]
+	editor = vim
+	excludesfile = /home/tac/.gitignore_global
+[user]
+	name = 0xTac
+	email = Tac1t0rnX@gmail.com
+[global]
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
+[https]
+	proxy = socks5://127.0.0.1:1088
+[http]
+	proxy = socks5://127.0.0.1:1088

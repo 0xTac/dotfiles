@@ -7,34 +7,34 @@
 - link:
     ~/.dotfiles: ''
     # git
-    ~/.gitconfig: config/gitconfig
-    ~/.gitignore_global: config/gitignore_global
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
     # tmux
-    ~/.tmux.conf: config/tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux/plugins:
         create: true
-        path: modules/tmux/
+        path: tmux/plugins/
     # zsh
-    ~/.zshrc: config/zshrc
+    ~/.zshrc: zsh/zshrc
     # ssh
-    ~/.ssh/config : config/ssh_config
+    ~/.ssh/config : ssh/config
     # vim
-    ~/.vimrc: config/vimrc
-    ~/.vim/autoload/plug.vim:
+    ~/.vimrc: vim/vimrc
+    ~/.vim/autoload:
       create: true
-      path: modules/vim/plug.vim
+      path: vim/autoload
     ~/.vim/plugged:
         create: true
-        path: modules/vim/plugged/
-    # # binary
-    #     ~/bin/common:
-    #       create: true
-    #       path: bin/
+        path: vim/plugged/
+    # binary
+        ~/.bin/common:
+          create: true
+          path: bin/common
     # sublime
-    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: config/sublimetext-settings
-    ~/.config/sublime-merge/Packages/User/Preferences.sublime-settings: config/sublimemerge-settings
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: sublime/sublimetext-settings.json
+    ~/.config/sublime-merge/Packages/User/Preferences.sublime-settings: sublime/sublimemerge-setting.json
     # vscode
-    ~/.config/Code/User/settings.json: config/vscode-settings.json    
+    ~/.config/Code/User/settings.json: vscode/vscode-settings.json    
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

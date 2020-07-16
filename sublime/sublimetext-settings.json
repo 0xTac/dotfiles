@@ -1,0 +1,80 @@
+{
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": true,
+	"block_caret": true,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
+	"caret_extra_width": 0,
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/DraculaPro/Dracula Pro (Van Helsing).tmTheme",
+	"default_encoding": "UTF-8",
+	"expand_tabs_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.pyc",
+		".*"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".*",
+		"node_modules",
+		"Documents",
+		"Downloads",
+		"snap",
+		"Music",
+		"Pictures",
+		"Templeates",
+		"Videos",
+		"Vmwares",
+		".json"
+	],
+	"folder_no_icon": true,
+	"font_face": "FantasqueSansMono Nerd Font Mono",
+	"font_options":
+	[
+		"no_italic",
+		"directwrite",
+		"dlig"
+	],
+	"font_size": 16,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Rust"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"index_files": false,
+	"line_padding_bottom": 0.5,
+	"line_padding_top": 0.5,
+	"match_brackets_angle": true,
+	"neovintageous_build_version": 11100,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"show_encoding": true,
+	"show_errors_inline": true,
+	"show_line_endings": true,
+	"sidebar_row_padding_medium": true,
+	"sidebar_size_13": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"status_bar_brighter": true,
+	"tab_size": 4,
+	"tabs_padding_medium": true,
+	"tabs_padding_small": true,
+	"tabs_small": true,
+	"theme": "SoDaReloaded Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"vintage_start_in_command_mode": true
+}

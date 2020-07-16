@@ -1,0 +1,33 @@
+Host 1604
+    HostName        172.16.230.140
+    Port            22
+    User            tac
+    IdentityFile    ~/.ssh/id_rsa.pub
+Host 1804
+    HostName        172.16.230.173
+    Port            22
+    User            tac
+    IdentityFile    ~/.ssh/id_rsa.pub
+Host hostwind
+    HostName        104.168.236.8
+    Port            22
+    User            root
+    IdentityFile    ~/.ssh/id_rsa.pub
+Host vultr
+    HostName        45.32.151.213
+    Port            22
+    User            root
+    IdentityFile    ~/.ssh/id_rsa.pub
+Host 1910
+    HostName        172.16.230.174
+    Port            22
+    User            tac
+Host 1904
+    HostName        172.16.230.151
+    Port            22
+    User            tac
+    IdentityFile    ~/.ssh/id_rsa.pub
+Host 2004
+    HostName        172.16.230.175
+    Port            22
+    User            tac
