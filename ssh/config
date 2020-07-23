@@ -31,3 +31,7 @@ Host 2004
     HostName        172.16.230.175
     Port            22
     User            tac
+Host server
+    HostName        10.114.11.5
+    Port            2222
+    User            lxw
