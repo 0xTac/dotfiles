@@ -1,13 +1,15 @@
 {
     "kite.showWelcomeNotificationOnStartup": false,
+    "window.menuBarVisibility": "toggle",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
     "python.languageServer": "Microsoft",
-    "editor.fontFamily": "FantasqueSansMono Nerd Font Mono",
-    "editor.fontSize": 16,
-    "workbench.iconTheme": "vscode-great-icons",
-    "editor.lineHeight": 16,
+    "editor.fontFamily": "FantasqueSansMono Nerd Font",
+    // "editor.fontFamily": "RobotoMono Nerd Font",
+    "editor.fontSize": 23,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.lineHeight": 23,
     "terminal.integrated.fontSize": 16,
     "markdown.preview.lineHeight": 1,
     "window.zoomLevel": 0,
@@ -16,5 +18,69 @@
         "<C-f>": false,
         "<C-c>": false,
         "<C-v>": false
-    }
+    },
+    "python.pythonPath": "/usr/bin/python",
+    "material-icon-theme.showWelcomeMessage": false,
+    // "workbench.colorCustomizations": {
+    //     "activityBar.background": "#333333",
+    //     "activityBar.foreground": "#cccccc",
+    //     "activityBarBadge.background": "#007acc",
+    //     "editor.background": "#1E1E1E",
+    //     "editor.foreground": "#D4D4D4",
+    //     "editor.inactiveSelectionBackground": "#3A3D41",
+    //     "editor.selectionHighlightBackground": "#ADD6FF26",
+    //     "editorIndentGuide.background": "#404040",
+    //     "list.dropBackground": "#383B3D",
+    //     "list.hoverBackground": "#2a2d2d",
+    //     "sideBar.background": "#252525",
+    //     "sideBarTitle.foreground": "#BBBBBB",
+    //     "tab.inactiveBackground": "#2d2d2d"
+    // }
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+          "#8abeb7",
+          "#c16868",
+          "#488ec8",
+          "DarkSeaGreen"
+        ],
+        "Red"
+      ],
+      "bracketPairColorizer.colorMode": "Independent",
+      "bracketPairColorizer.independentPairColors": [
+        [
+          "()",
+          [
+            "#8abeb7",
+            "#c16868",
+            "#488ec8",
+            "DarkSeaGreen"
+          ],
+          "Red"
+        ],
+        [
+          "[]",
+          [
+            "#8abeb7",
+            "#c16868",
+            "#488ec8",
+            "DarkSeaGreen"
+          ],
+          "Red"
+        ]
+      ],
+      "workbench.colorTheme": "Dracula Pro",
+      "workbench.startupEditor": "newUntitledFile",
+      "workbench.colorCustomizations": {
+        "statusBar.background": "#232426",
+        "statusBar.noFolderBackground": "#232426",
+        "statusBar.debuggingBackground": "#232426",
+        "sideBar.background": "#232426",
+        "tab.inactiveBackground": "#232426",
+        "statusBar.foreground": "#919293",
+        "tab.activeForeground": "#d2d2d2"
+      },
+      "workbench.tree.indent": 4,
 }

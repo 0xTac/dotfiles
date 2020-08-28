@@ -4,7 +4,7 @@ Host 1604
     User            tac
     IdentityFile    ~/.ssh/id_rsa.pub
 Host 1804
-    HostName        172.16.230.173
+    HostName        172.16.230.166
     Port            22
     User            tac
     IdentityFile    ~/.ssh/id_rsa.pub
@@ -23,12 +23,16 @@ Host 1910
     Port            22
     User            tac
 Host 1904
-    HostName        172.16.230.151
+    HostName        172.16.230.165
     Port            22
     User            tac
     IdentityFile    ~/.ssh/id_rsa.pub
 Host 2004
-    HostName        172.16.230.175
+    HostName        172.16.230.147
+    Port            22
+    User            tac
+Host 1704
+    HostName        172.16.230.172
     Port            22
     User            tac
 Host server

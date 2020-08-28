@@ -1,12 +1,15 @@
+set encoding=utf-8
 syntax enable
 set background=dark
 set nu
+set relativenumber
+set t_Co=256
+set guifont=Ubuntu:h12
+set linespace=2
+colo morning
 
 set nocompatible
 filetype plugin on
-
-" Gotta take this from Spacemacs - so good
-let mapleader = "\<Space>"
 
 " Unite
 nnoremap <leader>f :Unite -start-insert file_rec buffer<CR>
@@ -86,6 +89,38 @@ set incsearch
 set ignorecase
 set hlsearch
 set showmatch
+
+" clipboard share with system
+set clipboard+=unnamed
+
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+
+set guioptions-=e
+set nolist
+
+nnoremap ; :
+
+
+cnoremap <C-j> <t_kd>
+cnoremap <C-k> <t_ku>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+" normal模式下切换到确切的tab
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
 
 " set list listchars=tab:>-,trail:.,extends:>
 
@@ -177,8 +212,6 @@ let g:go_highlight_operators = 1
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -193,7 +226,6 @@ Plug 'junegunn/vim-easy-align'
 " Multiple Plug commands can be written in a single line using | separators
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -206,15 +238,46 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mhinz/vim-startify'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
+
+Plug 'ironcamel/vim-script-runner'
+Plug 'xuhdev/SingleCompile'
+
+"Plugin for tracecode 
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
+Plug 'Shougo/vimproc.vim'
+Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system
+Plug 'junegunn/seoul256.vim'
 call plug#end()
+
+" Ale 
+let g:ale_set_highlights = 0
+let g:ale_linters = {'python' : ['flake8']}
+let g:ale_fixers = {'*' : [], 'python': ['black']}
+
+" Nerdtree
+"autocmd vimenter * NERDTree 
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"Making it prettier
+let NERDTreeMinimalUI = 1
+
+" Airline
+let laststatus = 2
+let g:airline_powerline_fonts = 1  
+let g:airline_theme="dark"     
+let g:airline#extensions#tabline#enabled = 1    
+let g:airline#extensions#tabline#left_sep = ' '  
+let g:airline#extensions#tabline#left_alt_sep = '|'  
+let g:airline#extensions#tabline#buffer_nr_show = 1  
